@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Nodo Quetzal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="app">
+
+  <!-- CABECERA -->
+  <header class="header">
+    <div class="header-left">
+      <div class="header-eyebrow">
+        <span class="dot-live"></span>
+        Monitoreo en tiempo real · ESP32
+      </div>
+      <h1>Monitor de Calidad del Aire</h1>
+      <div class="header-subtitle">Actualización cada 2 s · Sensores PM2.5 / VOC / BME280</div>
+    </div>
+    <div class="header-right">
+      <div id="reloj">--:--:--</div>
+      <span id="indicador-estado" class="badge buena">BUENA</span>
+    </div>
+  </header>
+
+  <!-- MÉTRICAS -->
+  <section class="metrics-grid">
+    <div class="metric-card pm">
+      <span class="metric-icon">🌫</span>
+      <div class="metric-label">PM 2.5</div>
+      <div class="metric-value"><span id="val-pm">—</span><span class="metric-unit">µg/m³</span></div>
+    </div>
+    <div class="metric-card gas">
+      <span class="metric-icon">☁</span>
+      <div class="metric-label">Gases VOC</div>
+      <div class="metric-value"><span id="val-gas">—</span><span class="metric-unit">ppm</span></div>
+    </div>
+    <div class="metric-card temp">
+      <span class="metric-icon">🌡</span>
+      <div class="metric-label">Temperatura</div>
+      <div class="metric-value"><span id="val-temp">—</span><span class="metric-unit">°C</span></div>
+    </div>
+    <div class="metric-card hum">
+      <span class="metric-icon">💧</span>
+      <div class="metric-label">Humedad</div>
+      <div class="metric-value"><span id="val-hum">—</span><span class="metric-unit">%</span></div>
+    </div>
+    <div class="metric-card pres">
+      <span class="metric-icon">◎</span>
+      <div class="metric-label">Presión</div>
+      <div class="metric-value"><span id="val-pres">—</span><span class="metric-unit">hPa</span></div>
+    </div>
+  </section>
+
+  <!-- BARRA AQI PM2.5 -->
+  <div class="aqi-bar-wrap">
+    <div class="aqi-bar-label">
+      <span>Índice PM 2.5</span>
+      <span id="aqi-label-text">—</span>
+    </div>
+    <div class="aqi-track"><div id="aqi-fill" class="aqi-fill" style="width:0%"></div></div>
+  </div>
+
+  <!-- GRÁFICAS -->
+  <section class="charts-grid">
+    <div class="chart-card">
+      <div class="chart-header">
+        <span class="chart-title">PM 2.5 — Historial 60 seg</span>
+        <span class="chart-current pm-color" id="chart-pm-val">— µg/m³</span>
+      </div>
+      <div class="canvas-container"><canvas id="chartPM"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-header">
+        <span class="chart-title">Gases VOC — Historial 60 seg</span>
+        <span class="chart-current gas-color" id="chart-gas-val">— ppm</span>
+      </div>
+      <div class="canvas-container"><canvas id="chartGas"></canvas></div>
+    </div>
+  </section>
+
+  <!-- TABLA + BITÁCORA -->
+  <section class="bottom-grid">
+
+    <!-- Tabla histórica -->
+    <div class="section-card">
+      <div class="section-title">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+          <rect x="1" y="1" width="10" height="10" rx="2" stroke="#5a7a9e" stroke-width="1.2"/>
+          <line x1="1" y1="4.5" x2="11" y2="4.5" stroke="#5a7a9e" stroke-width="1"/>
+          <line x1="4.5" y1="4.5" x2="4.5" y2="11" stroke="#5a7a9e" stroke-width="1"/>
+        </svg>
+        Registro histórico
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Tiempo</th>
+              <th>PM 2.5 (µg/m³)</th>
+              <th>VOC (ppm)</th>
+              <th>Calidad</th>
+            </tr>
+          </thead>
+          <tbody id="history-body">
+            <tr><td colspan="4" style="text-align:center; padding:24px; color:#3d5c7e; font-size:0.78rem;">Esperando datos del sensor…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Bitácora de alarmas -->
+    <div class="section-card">
+      <div class="section-title">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+          <path d="M6 1L7.5 4.5L11 5L8.5 7.5L9 11L6 9.5L3 11L3.5 7.5L1 5L4.5 4.5Z" stroke="#5a7a9e" stroke-width="1.1" fill="none"/>
+        </svg>
+        Bitácora de alertas
+      </div>
+      <div id="alarm-log" class="log-wrap">
+        <div class="log-empty">Sin alertas registradas</div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CONTROL BUZZER -->
+  <div class="control-row">
+    <div class="control-info">
+      <h3>Control de Alarma Sonora</h3>
+      <p id="mute-status">El sistema sonoro automático está operando con normalidad.</p>
+    </div>
+    <button id="btn-mute" class="btn active" onclick="toggleMute()">Silenciar Alarma</button>
+  </div>
+
+  <footer class="footer">
+    AirMonitor v2.0 · ESP32 · Chart.js · &copy; 2025
+  </footer>
+
+</div><!-- /app -->
+
+<!-- ✅ CRÍTICO: el script DEBE ir aquí, DESPUÉS del HTML, no en el <head> -->
+<script src="script.js"></script>
+</body>
+</html>
