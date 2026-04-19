@@ -4,6 +4,11 @@ Bienvenido al repositorio oficial del prototipo de monitoreo ambiental desarroll
 
 Este proyecto implementa un sistema embebido de bajo costo basado en un ESP32 capaz de medir, analizar y fusionar en tiempo real la concentración de gases contaminantes, material particulado y variables meteorológicas, generando alertas tempranas *in situ* sin necesidad de conexión a internet.
 
+<div align="center">
+  <img src="images/nodo-frontal.jpg" alt="Vista Frontal del Nodo" width="45%" />
+  <img src="images/nodo-lateral.png" alt="Vista Lateral del Nodo" width="45%" />
+</div>
+
 ### Tecnologías y Hardware Principal
 * **Microcontrolador:** ESP32 (Programado en C++ / PlatformIO)
 * **Sensores Ambientales:** MQ-135 (Gases/VOCs), HW-870 (Mock PM), BMP280 (Presión/Temp), DHT22 (Humedad).
