@@ -1,9 +1,9 @@
-# 🌍 Nodo IoT - Monitoreo de Calidad del Aire (Sabana Centro)
+# 🌍 Nodo Quetzal - Monitoreo de Calidad del Aire (Sabana Centro)
 
 [![Estado: Completado](https://img.shields.io/badge/Estado-Completado-success.svg)](#)
 [![Hardware: ESP32](https://img.shields.io/badge/Hardware-ESP32-blue.svg)](#)
 [![Framework: PlatformIO](https://img.shields.io/badge/Framework-PlatformIO-orange.svg)](#)
-[![Sensores: MQ135%20%7C%20HW870%20%7C%20BMP280%20%7C%20DHT22](https://img.shields.io/badge/Sensores-MQ135_%7C_HW870_%7C_BMP280_%7C_DHT22-blueviolet.svg)](#)
+[![Sensores: MQ135%20%7C%20HW870%20%7C%20BMP280%20%7C%20DHT22](https://img.shields.io/badge/Sensores-MQ135_%7C_HW870_%7C_BMP280_%7C_DHT22-blueviolet.svg)](https://github.com/Firewallrbn/IoT-AirQuality-SabanaCentro/wiki)
 
 > **Prototipo de monitoreo ambiental *in situ* y de bajo costo desarrollado para la subregión de Sabana Centro, Colombia (aprox. 2.560 msnm).**
 
