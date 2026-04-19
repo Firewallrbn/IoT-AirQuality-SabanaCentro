@@ -60,7 +60,7 @@ Los invitamos profundamente a explorar cada una de las páginas, donde se hace d
 
 5. **[Protocolos de Uso, Replicabilidad y Video de Validación]**: Instructivo detallado para escalar este proyecto a un sistema interconectado y los videos demostrativos del éxito del nodo en laboratorio.
 
-👉 **[https://github.com/Firewallrbn/IoT-AirQuality-SabanaCentro/wiki](https://github.com/Firewallrbn/IoT-AirQuality-SabanaCentro/wiki)** 👈
+👉 **[HAZ CLIC AQUÍ PARA ACCEDER A LA WIKI DEL PROYECTO ACTUALIZADA](https://github.com/Firewallrbn/IoT-AirQuality-SabanaCentro/wiki)** 👈
 
 
 ---
