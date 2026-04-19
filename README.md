@@ -15,7 +15,15 @@ Este repositorio aloja el código fuente y el diseño de la arquitectura de un s
 
  <img src="images/nodo-frontal.jpg" alt="Vista Frontal del Nodo" width="45%" style="margin-right: 2%; border-radius: 12px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);" />
 
+
+```markdown
+ <br>
+
  <img src="images/nodo-lateral.png" alt="Vista Lateral del Nodo" width="45%" style="border-radius: 12px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);" />
+
+</div>
+```
+
 
 </div>
 
