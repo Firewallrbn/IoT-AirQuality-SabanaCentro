@@ -1,9 +1,9 @@
-# 🌍 Nodo Quetzal - Monitoreo de Calidad del Aire (Sabana Centro)
+# 🌿 Nodo Quetzal - Monitoreo de Calidad del Aire (Sabana Centro)
 
 [![Estado: Completado](https://img.shields.io/badge/Estado-Completado-success.svg)](#)
 [![Hardware: ESP32](https://img.shields.io/badge/Hardware-ESP32-blue.svg)](#)
 [![Framework: PlatformIO](https://img.shields.io/badge/Framework-PlatformIO-orange.svg)](#)
-[![Sensores: MQ135%20%7C%20HW870%20%7C%20BMP280%20%7C%20DHT22](https://img.shields.io/badge/Sensores-MQ135_%7C_HW870_%7C_BMP280_%7C_DHT22-blueviolet.svg)](https://github.com/Firewallrbn/IoT-AirQuality-SabanaCentro/wiki)
+[![Sensores: MQ135%20%7C%20HW870%20%7C%20BMP280%20%7C%20DHT22](https://img.shields.io/badge/Sensores-MQ135_%7C_HW870_%7C_BMP280_%7C_DHT22-blueviolet.svg)](#)
 
 > **Prototipo de monitoreo ambiental *in situ* y de bajo costo desarrollado para la subregión de Sabana Centro, Colombia (aprox. 2.560 msnm).**
 
@@ -44,7 +44,6 @@ La solución integra múltiples niveles de detección, asegurando que la evaluac
 | **DHT22** | Muestreo en tiempo real de temperatura ambiental y humedad relativa. |
 | **OLED SSD1306** | Display de interacción con el usuario final de 128x64. |
 | **Matriz LED RGB**| Actuador de señalización de alertas directas y de rápida visualización a la distancia. |
-
 ## 📖 Documentación Rigurosa (Wiki)
 
 Debido a la magnitud de diseño, calibración, justificación de impacto en la zona de Sabana Centro, esquemáticos y validación metódica, **este repositorio cuenta con una extensa documentación ubicada en su WIKI oficial**.
@@ -61,9 +60,8 @@ Los invitamos profundamente a explorar cada una de las páginas, donde se hace d
 
 5. **[Protocolos de Uso, Replicabilidad y Video de Validación]**: Instructivo detallado para escalar este proyecto a un sistema interconectado y los videos demostrativos del éxito del nodo en laboratorio.
 
-👉 **[HAZ CLIC AQUÍ PARA ACCEDER A LA WIKI DEL PROYECTO ACTUALIZADA](#)** 👈
+👉 **[https://github.com/Firewallrbn/IoT-AirQuality-SabanaCentro/wiki](https://github.com/Firewallrbn/IoT-AirQuality-SabanaCentro/wiki)** 👈
 
-*(Reemplaza "#" con el enlace real de la wiki de tu repositorio de Github/Gitlab).*
 
 ---
 
