@@ -1,4 +1,4 @@
-# 🌿 Nodo Quetzal - Monitoreo de Calidad del Aire (Sabana Centro)
+# Nodo Quetzal - Monitoreo de Calidad del Aire (Sabana Centro)
 
 [![Estado: Completado](https://img.shields.io/badge/Estado-Completado-success.svg)](#)
 [![Hardware: ESP32](https://img.shields.io/badge/Hardware-ESP32-blue.svg)](#)
@@ -25,25 +25,25 @@ Este repositorio aloja el código fuente y la arquitectura completa de un sistem
 
 <br>
 
-## ✨ Características Principales
+## Características Principales
 
-* **🖥️ Procesamiento Edge Autónomo:** Basado en un microcontrolador ESP32 programado de manera nativa en C++ y gestionado usando PlatformIO. Incorpora algoritmos matemáticos como la compensación de temperatura y humedad κ-Köhler en el PMS5003 y un motor de reglas de fusión de datos de 5 matrices.
+* ** Procesamiento Edge Autónomo:** Basado en un microcontrolador ESP32 programado de manera nativa en C++ y gestionado usando PlatformIO. Incorpora algoritmos matemáticos como la compensación de temperatura y humedad κ-Köhler en el PMS5003 y un motor de reglas de fusión de datos de 5 matrices.
 
-* **🚦 Semaforización Normativa:** Lógica estricta de alertas basada en los límites de exposición permisibles de **OSHA y NIOSH**, alineados con la Resolución 2254 de 2017 del MinAmbiente y las Guías OMS 2021. Incluye notificación *in situ* con Matriz LED RGB y Buzzer.
+* ** Semaforización Normativa:** Lógica estricta de alertas basada en los límites de exposición permisibles de **OSHA y NIOSH**, alineados con la Resolución 2254 de 2017 del MinAmbiente y las Guías OMS 2021. Incluye notificación *in situ* con Matriz LED RGB y Buzzer.
 
-* **📊 Doble Dashboard (Local + Global):** Servidor web embebido en el ESP32 para acceso local (WLAN), y Dashboard en Ubidots accesible desde cualquier navegador conectado a internet en Colombia.
+* ** Doble Dashboard (Local + Global):** Servidor web embebido en el ESP32 para acceso local (WLAN), y Dashboard en Ubidots accesible desde cualquier navegador conectado a internet en Colombia.
 
-* **📡 Comunicación MQTT End-to-End:** Protocolo MQTT asíncrono desde el ESP32 hasta Ubidots, pasando por un broker Mosquitto local en la Raspberry Pi. Elimina la latencia de HTTP y permite suscripciones bidireccionales.
+* ** Comunicación MQTT End-to-End:** Protocolo MQTT asíncrono desde el ESP32 hasta Ubidots, pasando por un broker Mosquitto local en la Raspberry Pi. Elimina la latencia de HTTP y permite suscripciones bidireccionales.
 
-* **💾 Persistencia Local Anti-Pérdidas:** Base de datos SQLite en la Raspberry Pi que almacena **todo** registro antes de enviarlo a la nube. Si se cae el internet, los datos quedan a salvo localmente.
+* ** Persistencia Local Anti-Pérdidas:** Base de datos SQLite en la Raspberry Pi que almacena **todo** registro antes de enviarlo a la nube. Si se cae el internet, los datos quedan a salvo localmente.
 
-* **🧠 Inteligencia Artificial Integrada (Gemini 2.0 Flash):** Módulo autónomo que analiza las últimas lecturas y genera diagnósticos ambientales contextualizados. Se activa automáticamente cada 20 lecturas o manualmente desde el dashboard de Ubidots.
+* ** Inteligencia Artificial Integrada (Gemini 2.0 Flash):** Módulo autónomo que analiza las últimas lecturas y genera diagnósticos ambientales contextualizados. Se activa automáticamente cada 20 lecturas o manualmente desde el dashboard de Ubidots.
 
-* **🔒 Seguridad RBAC:** Control de Acceso Basado en Roles. El administrador genera URLs seguras de solo lectura para las autoridades (Rector, Alcaldía, CAR). Las credenciales sensibles residen exclusivamente en la Raspberry Pi.
+* ** Seguridad RBAC:** Control de Acceso Basado en Roles. El administrador genera URLs seguras de solo lectura para las autoridades (Rector, Alcaldía, CAR). Las credenciales sensibles residen exclusivamente en la Raspberry Pi.
 
-* **🛡️ Tolerancia a Fallos Multicapa:** Reconexión automática en ESP32 (lógica `millis()` no bloqueante) y en el Gateway Python (`try-except` infinitos con reintentos cada 5 segundos). El sistema nunca se congela.
+* ** Tolerancia a Fallos Multicapa:** Reconexión automática en ESP32 (lógica `millis()` no bloqueante) y en el Gateway Python (`try-except` infinitos con reintentos cada 5 segundos). El sistema nunca se congela.
 
-## 🛠️ Arquitectura de Hardware y Sensores
+## Arquitectura de Hardware y Sensores
 
 La solución integra múltiples niveles de detección, asegurando que la evaluación de la calidad del aire sea completa:
 
@@ -58,7 +58,7 @@ La solución integra múltiples niveles de detección, asegurando que la evaluac
 | **OLED SSD1306** | Display de interacción con el usuario final de 128x64 píxeles. |
 | **LED RGB + Buzzer** | Actuadores de señalización de alertas directas y de rápida visualización a distancia. |
 
-## 🌐 Stack Tecnológico
+## Stack Tecnológico
 
 | Capa | Tecnología | Lenguaje |
 |---|---|---|
@@ -69,7 +69,7 @@ La solución integra múltiples niveles de detección, asegurando que la evaluac
 | **Inteligencia Artificial** | Google Gemini 2.0 Flash (API REST) | Python |
 | **Base de Datos** | SQLite 3 (`historial_aire.db`) | SQL |
 
-## 📖 Documentación Rigurosa (Wiki)
+## Documentación Rigurosa (Wiki)
 
 Debido a la magnitud de diseño, calibración, justificación de impacto en la zona de Sabana Centro, esquemáticos y validación metódica, **este repositorio cuenta con una extensa documentación ubicada en su WIKI oficial**.
 
@@ -96,7 +96,7 @@ Los invitamos profundamente a explorar cada una de las páginas, donde se hace d
 
 ---
 
-## 👨‍💻 Equipo de Desarrollo e Investigación
+## Equipo de Desarrollo e Investigación
 
 Este prototipo hardware/software fue orquestado y creado por:
 
